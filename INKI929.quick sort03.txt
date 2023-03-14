@@ -1,0 +1,20 @@
+#include <stdio.h>      
+#include <time.h> 
+/*so pomosh na bibliotekata time.h 
+se ispishuva denesna  data, den, godina,*/      
+
+int main ()
+{
+  time_t rawtime;
+  struct tm * timeinfo;
+  
+/*vo ovaa zadaca so pomosh na local time
+se prikazuva lokalnoto vreme*/
+
+
+  time (&rawtime);
+  timeinfo = localtime (&rawtime);
+  printf ("Current local time and date: %s", asctime(timeinfo));
+
+  return 0;
+}
